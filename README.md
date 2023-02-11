@@ -7,7 +7,8 @@ After that send post request to the API `https://googlesheetform.vercel.app/add_
 
 Example:
 ```
-var formdata = new FormData();
+const form = document.getElementById('form');
+var formdata = new FormData(form);
 formdata.append("sheetId", "YOUR GOOGLE SHEET ID");
 
 var requestOptions = {
