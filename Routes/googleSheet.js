@@ -24,7 +24,8 @@ router.post("/", upload.none(), async (req, res, next) =>
         res.send(response)
     }
     catch(err){
-        next(createError(err.response.status,err.response.data.error.message))
+        console.log(err)
+        next(err.response)
     }
 })
 export { router }
